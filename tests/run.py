@@ -23,6 +23,8 @@ settings.configure(
         'django.contrib.auth',
         'django.contrib.sessions',
         'django.contrib.admin',
+
+        'logger',
     ),
     PASSWORD_HASHERS=('django.contrib.auth.hashers.MD5PasswordHasher',),
     SITE_ID=1,

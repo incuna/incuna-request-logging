@@ -3,4 +3,5 @@ coverage==3.7.1
 dj-database-url==0.3.0
 flake8==2.3.0
 flake8-import-order==0.5.1
+incuna-test-utils==6.3.1
 psycopg2==2.6.1
