@@ -3,13 +3,13 @@ from unittest.mock import patch
 from django.contrib.auth.models import AnonymousUser, User
 from django.test import RequestFactory, TestCase
 
-from logger.middleware import LogRequestMiddleware
+from logger.middleware import LogAuthenticatedRequestMiddleware
 
 
 class TestLogRequestMiddleware(TestCase):
     def setUp(self):
         self.factory = RequestFactory()
-        self.middleware = LogRequestMiddleware()
+        self.middleware = LogAuthenticatedRequestMiddleware()
 
     def test_authenticated(self):
         request = self.factory.get('/admin')
