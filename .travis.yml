@@ -1,0 +1,15 @@
+language: python
+python:
+  - 3.4
+script: make test
+notifications:
+  email: false
+env:
+  global:
+    - DATABASE_URL='postgres://postgres@localhost/incuna_logging'
+  matrix:
+    - DJANGO='django>=1.8,<1.9'
+install:
+  - psql -c 'CREATE DATABASE incuna_logging' -U postgres;
+  - pip install -r requirements.txt
+  - pip install --upgrade $DJANGO
