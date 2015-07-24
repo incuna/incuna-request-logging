@@ -13,4 +13,5 @@ env:
 install:
   - psql -c 'CREATE DATABASE incuna_logging' -U postgres;
   - pip install -r requirements.txt
+  - pip install -e .
   - pip install --upgrade $DJANGO

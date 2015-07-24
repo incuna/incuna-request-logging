@@ -16,6 +16,8 @@ settings.configure(
         ),
     },
     INSTALLED_APPS=(
+        'logger',
+
         # Put contenttypes before auth to work around test issue.
         # See: https://code.djangoproject.com/ticket/10827#comment:12
         'django.contrib.sites',
@@ -39,6 +41,6 @@ class TestRunner(ColourRunnerMixin, DiscoverRunner):
 
 
 test_runner = TestRunner(verbosity=1)
-failures = test_runner.run_tests(['tests'])
+failures = test_runner.run_tests([])
 if failures:
     sys.exit(1)
