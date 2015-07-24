@@ -16,6 +16,8 @@ settings.configure(
         ),
     },
     INSTALLED_APPS=(
+        'logger',
+
         # Put contenttypes before auth to work around test issue.
         # See: https://code.djangoproject.com/ticket/10827#comment:12
         'django.contrib.sites',
@@ -23,8 +25,6 @@ settings.configure(
         'django.contrib.auth',
         'django.contrib.sessions',
         'django.contrib.admin',
-
-        'logger',
     ),
     PASSWORD_HASHERS=('django.contrib.auth.hashers.MD5PasswordHasher',),
     SITE_ID=1,
