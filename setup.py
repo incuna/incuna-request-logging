@@ -1,4 +1,4 @@
-from setuptools import find_packages, setup
+from setuptools import setup
 
 
 setup(
@@ -21,6 +21,6 @@ setup(
         'Programming Language :: Python :: 3.4',
     ],
 
-    packages=find_packages(),
+    packages=['logger'],
     setup_requires=['wheel'],
 )

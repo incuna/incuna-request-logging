@@ -41,6 +41,6 @@ class TestRunner(ColourRunnerMixin, DiscoverRunner):
 
 
 test_runner = TestRunner(verbosity=1)
-failures = test_runner.run_tests(['tests'])
+failures = test_runner.run_tests([])
 if failures:
     sys.exit(1)
